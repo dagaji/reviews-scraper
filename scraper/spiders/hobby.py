@@ -36,9 +36,10 @@ class HobbySpider(BaseSpider):
         return all_urls, all_reviews
 
     def process_review(self, response):
-        game_review = response.meta["game_review"]
 
         try:
+            game_review = response.meta["game_review"]
+            
             info_div = response.xpath(
                 "//aside[@class='cards-list']//div[@class='block-mini-card']")
             game_review['game_name'] = info_div.xpath(

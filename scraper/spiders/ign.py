@@ -40,9 +40,10 @@ class IGNSpider(BaseSpider):
         return all_urls, all_reviews
 
     def process_review(self, response):
-        game_review = response.meta["game_review"]
 
         try:
+            game_review = response.meta["game_review"]
+            
             review_div = response.xpath("//div[@class='review']")
             game_review['score'] = float(review_div.xpath(
                 "./figure//span[@class='side-wrapper side-wrapper hexagon-content']/text()").extract_first()) * 10
