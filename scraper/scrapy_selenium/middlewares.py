@@ -76,7 +76,7 @@ class SeleniumMiddleware:
 
     def process_request(self, request, spider):
         """Process a request using the selenium driver if applicable"""
-        if request.middleware_cls == self.__class__:
+        if request.meta["target_middleware"] == self.__class__:
             self._process_request(request, spider)
             response_html = self._page_source()
             self.first_request = False

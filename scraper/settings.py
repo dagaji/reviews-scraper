@@ -1,6 +1,6 @@
 SELENIUM_DRIVER_NAME = 'chrome'
 SELENIUM_DRIVER_ARGUMENTS=['-headless']
-#SELENIUM_DRIVER_ARGUMENTS=[]
+SELENIUM_DRIVER_ARGUMENTS=[]
 
 
 DEPTH_PRIORITY = 1
@@ -73,9 +73,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {"scraper.pipelines.GamesReviewsPipelineMOngoDB":100,}
+ITEM_PIPELINES = {"scraper.pipelines.GamesReviewsPipelineJSON":100,}
 
-MAX_NUM_ITEMS = 10
+MAX_NUM_ITEMS = 5
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
