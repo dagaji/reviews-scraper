@@ -1,6 +1,6 @@
 # reviews-scraper
 
-Web Scraping utilities to extract reviews from video game webesites. If you want to know more about this project, check out this 
+Web Scraping utilities to extract reviews from video game websites. If you want to know more about this project, check out this 
 [blog post](https://dagaji.netlify.app/p/scraping-game-reviews-websites-with-scrapy-and-selenium/)
 
 ## Installation
